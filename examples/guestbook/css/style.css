@@ -1,0 +1,105 @@
+body {
+	font: 10pt Trebuchet MS, Arial, serif;
+	text-align: center;
+}
+
+#container {
+	width: 600px;
+	margin: 0 auto;
+	padding: 0px;
+	text-align: left;
+}
+
+#head {
+    text-align: center;
+    border: 1px solid #ADD8E6;
+}
+
+#menu {
+    height: 50px;
+    text-align: center;
+}
+
+#menu ul {
+    width: 400px;
+    margin: 0 auto;
+	padding: 0px;
+}
+
+#menu li {
+    width: 180px;
+    margin: 10px 5px 0px 5px;
+    line-height: 28px;
+    list-style-type: none;
+	float: left;
+    border: 1px solid #ADD8E6;
+}
+
+#menu li a {
+    display: block;
+    color: #0000A0;
+    text-decoration: none;
+}
+
+#menu li a:hover {
+    background-color: #00FFFF;
+}
+
+#menu li a.current {
+    background-color: #00FFFF;
+}
+
+#flashes ul {
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+
+#flashes li {
+    list-style-type: none;
+}
+
+#content {
+    border: 1px solid #ADD8E6;
+}
+
+#content div {
+    padding: 10px;
+}
+
+#content div.odd {
+    background-color: #00FFFF;
+}
+
+#content div h2 {
+    font-size: 12pt;
+    margin: 0px;
+}
+
+#content div p.from {
+    font-size: 9pt;
+    color: #808080;
+    margin: 0px;
+}
+
+#content table {
+    padding: 15px 15px 40px 15px;
+    font-size: 10pt;
+}
+
+#content table ul {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#content table li {
+    list-style-type: none;
+}
+
+#content table td.errors {
+    color: #FF0000;
+}
+
+#content p.empty {
+    text-align: center;
+}

@@ -1,0 +1,20 @@
+<n:extends xmlns:n="xmltmpl-core-tags">
+    <n:define name="content">
+        
+        <n:select>
+            <n:when test="{!$messages}">
+                <p class="empty">Prozatím nebyly vloženy žádné zprávy.</p>
+            </n:when>
+            <n:otherwise>
+                <n:foreach items="{$messages}" var="msg">
+                    <div class="{$iterator->odd ? 'odd' : 'even'}">
+                        <h2>{$msg['subject']}</h2>
+                        <p class="from">{$msg['from']} ({$msg['email']})</p>
+                        <p>{$msg['text']}</p>
+                    </div>
+                </n:foreach>
+            </n:otherwise>
+        </n:select>
+        
+    </n:define>
+</n:extends>

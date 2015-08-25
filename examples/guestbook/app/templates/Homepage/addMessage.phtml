@@ -1,0 +1,35 @@
+<n:extends xmlns:n="xmltmpl-core-tags">
+    <n:define name="content">
+        
+        <n:form form="msgForm" attr="{array('id' => 'msgForm')}">
+            <table>
+                <tr>
+                    <td colspan="2" class="errors">
+                        <n:formErrors/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><n:label name="from"/></td>
+                    <td><n:input name="from"/></td>
+                </tr>
+                <tr>
+                    <td><n:label name="email"/></td>
+                    <td><n:input name="email"/></td>
+                </tr>
+                <tr>
+                    <td><n:label name="subject"/></td>
+                    <td><n:input name="subject"/></td>
+                </tr>
+                <tr>
+                    <td><n:label name="text"/></td>
+                    <td><n:input name="text"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><n:input name="send"/></td>
+                </tr>
+            </table>
+        </n:form>
+        
+    </n:define>
+</n:extends>

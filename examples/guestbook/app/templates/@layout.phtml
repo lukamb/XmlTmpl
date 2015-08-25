@@ -1,0 +1,44 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:n="xmltmpl-core-tags" xmlns:m="xmltmpl-user-tags">
+
+<head>
+    <title>{$title}</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+
+<body>
+    
+    <div id="container">
+        
+        <div id="head">
+            <h1>{h::upper($title)}</h1>
+        </div>
+        
+        <!--- Menu -->
+        <div id="menu">
+            <ul>
+                <li><a href="{f::link('Homepage:')}" class="{f::isLinkCurrent('Homepage:') ? 'current' : ''}">Zobrazit zprávy</a></li>
+                <li><a href="{f::link('Homepage:addMessage')}" class="{f::isLinkCurrent('Homepage:addMessage') ? 'current' : ''}">Přidat zprávu</a></li>
+            </ul>
+        </div>
+        
+        <!--- Výpis zpráv o výsledku vložení příspěvku -->
+        <n:if test="{$flashes}">
+            <div id="flashes">
+                <ul>
+                    <n:foreach items="{$flashes}" var="flash">
+                        <li>{$flash->message}</li>
+                    </n:foreach>
+                </ul>
+            </div>
+        </n:if>
+        
+        <div id="content">
+            <!--- Vložení obsahu stránky podle konkrétního view -->
+            <n:insert name="content"/>
+        </div>
+        
+    </div>
+    
+</body>
+
+</html>
